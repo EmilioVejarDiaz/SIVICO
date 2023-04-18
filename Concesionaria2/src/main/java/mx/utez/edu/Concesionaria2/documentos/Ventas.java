@@ -1,6 +1,7 @@
 package mx.utez.edu.Concesionaria2.documentos;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -14,14 +15,26 @@ public class Ventas {
     private long cantidadPagada;
     private String fechaTransaccion;
 
+    @DBRef
+    private Vehiculos vehiculo;  // Referencia al documento embebido
 
-    public Ventas(int id, String nombreCliente, String nombreEmpleado, int idVehiculo, long cantidadPagada, String fechaTransaccion) {
+
+    public Ventas(int id, String nombreCliente, String nombreEmpleado, int idVehiculo, long cantidadPagada, String fechaTransaccion, Vehiculos vehiculo) {
         this.id = id;
         this.nombreCliente = nombreCliente;
         this.nombreEmpleado = nombreEmpleado;
         this.idVehiculo = idVehiculo;
         this.cantidadPagada = cantidadPagada;
         this.fechaTransaccion = fechaTransaccion;
+        this.vehiculo = vehiculo;
+    }
+
+    public Vehiculos getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculos vehiculo) {
+        this.vehiculo = vehiculo;
     }
 
     public int getId() {

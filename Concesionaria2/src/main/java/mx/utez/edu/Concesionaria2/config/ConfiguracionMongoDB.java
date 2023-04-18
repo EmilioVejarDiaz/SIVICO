@@ -15,7 +15,12 @@ public class ConfiguracionMongoDB {
 
     @Bean
     public MongoClient mongoClient() {
-        return MongoClients.create("mongodb://localhost:27017/Concesionaria");
+        return MongoClients.create("mongodb+srv://Linkelink:20213Tn091@example-01.tkqv1i9.mongodb.net/test");
+
+
+            //return MongoClients.create("mongodb+srv://Linkelink:20213Tn091@example-01.tkqv1i9.mongodb.net/test");
+
+
     }
 
     @Bean

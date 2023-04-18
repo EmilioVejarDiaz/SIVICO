@@ -1,5 +1,5 @@
 async function obtenerDatos() {
-    const response = await fetch('http://localhost:8080/cliente/get');
+    const response = await fetch('http://52.201.236.93:8080/cliente/get');
     const datos = await response.json();
     return datos;
   }
@@ -32,7 +32,7 @@ async function obtenerDatos() {
 
 
   async function obtenerDatosEmpleados() {
-    const response = await fetch('http://localhost:8080/empleado/get');
+    const response = await fetch('http://52.201.236.93:8080/empleado/get');
     const datos = await response.json();
     return datos;
 }
@@ -62,7 +62,7 @@ window.addEventListener('load', agregarDatosEmpleado);
 
 
 async function obtenerDatosProv() {
-  const response = await fetch('http://localhost:8080/proveedor/get');
+  const response = await fetch('http://52.201.236.93:8080/proveedor/get');
   const datos = await response.json();
   return datos;
 }
@@ -92,7 +92,7 @@ window.addEventListener('load', agregarDatosProv);
 
 
 async function obtenerDatosServ() {
-  const response = await fetch('http://localhost:8080/servicio/get');
+  const response = await fetch('http://52.201.236.93:8080/servicio/get');
   const datos = await response.json();
   return datos;
 }
@@ -122,7 +122,7 @@ window.addEventListener('load', agregarDatosServ);
 
 
 async function obtenerDatosSucurs() {
-  const response = await fetch('http://localhost:8080/sucursal/get');
+  const response = await fetch('http://52.201.236.93:8080/sucursal/get');
   const datos = await response.json();
   return datos;
 }
@@ -152,7 +152,7 @@ window.addEventListener('load', agregarDatosSucurs);
 
 
 async function obtenerDatosVehiculo() {
-  const response = await fetch('http://localhost:8080/vehiculo/get');
+  const response = await fetch('http://52.201.236.93:8080/vehiculo/get');
   const datos = await response.json();
   return datos;
 }
@@ -183,7 +183,7 @@ window.addEventListener('load', agregarDatosVehiculo);
 
 
 async function obtenerDatosVenta() {
-  const response = await fetch('http://localhost:8080/venta/get');
+  const response = await fetch('http://52.201.236.93:8080/ventas/get');
   const datos = await response.json();
   return datos;
 }
